@@ -15,6 +15,7 @@ namespace AspNetCoreTodo.UnitTests
         public async Task AddNewItemAsIncompleteWithDueDate()
         {
             //要引用Microsoft.EntityFrameworkCore.InMemory
+            // 用内存作为数据库来模拟真实的数据库
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: "Test_AddNewItem").Options;
 
